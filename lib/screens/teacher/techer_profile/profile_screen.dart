@@ -159,28 +159,6 @@ class MyDrawer extends StatelessWidget {
               child: TextButton(
                 onPressed: () {},
                 child: const Text(
-                  'Register as a Tutor',
-                  style: TextStyle(color: Colors.blue),
-                ),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              height: 40,
-              width: MediaQuery.of(context).size.width * .50,
-              decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.blue, // Change color as needed
-                    width: 1.0, // Adjust border width
-                  ),
-                  // border: ,
-                  borderRadius: BorderRadius.circular(5)),
-              child: TextButton(
-                onPressed: () {},
-                child: const Text(
                   'Post request for Tutor',
                   style: TextStyle(color: Colors.blue),
                 ),
