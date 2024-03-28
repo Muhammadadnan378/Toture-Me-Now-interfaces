@@ -10,7 +10,7 @@ class CustomText extends StatelessWidget {
     return Text(
       textAlign: TextAlign.center,
       text,
-      overflow: TextOverflow.ellipsis,
+      // overflow: TextOverflow.ellipsis,
       style: style,
     );
   }

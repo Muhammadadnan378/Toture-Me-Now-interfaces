@@ -4,7 +4,8 @@ import 'package:projects/widgets/custom_text.dart';
 
 class BiseGrade extends StatelessWidget {
   List? listBoard = [];
-  BiseGrade({super.key, this.listBoard});
+  List<String?> icons;
+  BiseGrade({super.key, this.listBoard, required this.icons});
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +34,8 @@ class BiseGrade extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.subject,
-                  color: Colors.blue,
-                  size: 45,
-                ),
+
+                 Image.asset(icons[index]!, width: 45, height: 45,),
                 CustomText(text: listBoard?[index], style: kFormTextStyle)
               ],
             ),

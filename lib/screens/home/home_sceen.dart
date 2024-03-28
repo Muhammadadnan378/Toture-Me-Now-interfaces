@@ -8,6 +8,7 @@ import 'package:projects/screens/home/components/looking_container.dart';
 import 'package:projects/screens/home/components/search.dart';
 import 'package:projects/screens/home/components/subject.dart';
 import 'package:projects/screens/teacher/new_teacher.dart';
+import 'package:projects/utils/images.dart';
 
 import '../../utils/text.dart';
 import '../../widgets/custom_text.dart';
@@ -204,6 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             Expanded(
                               child: TabBarView(children: [
                                 Subjects(
+                                  icons: [AppImages.maths, AppImages.science, AppImages.physics, AppImages.chemistry, AppImages.computer, AppImages.biology, AppImages.islamicstudy],
                                   list: const [
                                     'Maths',
                                     'Science',
@@ -215,6 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 ),
                                 BiseGrade(
+                                  icons: [AppImages.bisem, AppImages.bisep, AppImages.biser, AppImages.bisel, AppImages.bisef, AppImages.bisek, AppImages.bisepp],
                                   listBoard: const [
                                     'BISE Mardan',
                                     'BISE Peshawar',
@@ -226,6 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 ),
                                 LevelWidgets(
+                                  icons: [AppImages.preschool, AppImages.alevel, AppImages.gradef, AppImages.middel, AppImages.matric],
                                   levels: const [
                                     'Preschool',
                                     'Grade 1-5',

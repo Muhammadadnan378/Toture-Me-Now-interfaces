@@ -143,12 +143,14 @@ class _TeacherScreenState extends State<TeacherScreen> {
                             Expanded(
                               child: TabBarView(children: [
                                 Subjects(
+                                  icons: [AppImages.library, AppImages.content],
                                   list: const [
                                     'Tutor Library',
                                     'Content Generation'
                                   ],
                                 ),
                                 BiseGrade(
+                                  icons: [AppImages.am10, AppImages.am12, AppImages.pm1,AppImages.pm2],
                                   listBoard: const [
                                     '10-11',
                                     '11-12',
@@ -157,6 +159,8 @@ class _TeacherScreenState extends State<TeacherScreen> {
                                   ],
                                 ),
                                 LevelWidgets(
+                                  icons: [AppImages.onlineclass],
+                                  containerHieght: 140,
                                   levels: const ['Create Online Class'],
                                 )
                               ]),

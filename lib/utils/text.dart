@@ -15,7 +15,7 @@ final kSecondTextStyle = TextStyle(
     color: Colors.black);
 final kFormTextStyle = TextStyle(
   fontFamily: ' Montserrat VariableFont',
-  fontSize: 16.sp,
+  fontSize: 13.sp,
   fontWeight: FontWeight.w500,
   color: Colors.black,
 );
