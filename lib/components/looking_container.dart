@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:projects/components/widgets/CustomButton.dart';
+import 'package:projects/components/widgets/comming_soon_dilaouge.dart';
+import 'package:projects/components/widgets/custom_text.dart';
 import 'package:projects/utils/images.dart';
 import 'package:projects/utils/text.dart';
-import 'package:projects/widgets/CustomButton.dart';
-import 'package:projects/widgets/custom_text.dart';
-
-import '../../../widgets/comming_soon_dilaouge.dart';
 
 class LookingContainer extends StatelessWidget {
   const LookingContainer({super.key});

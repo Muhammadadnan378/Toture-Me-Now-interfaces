@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:projects/components/widgets/comming_soon_dilaouge.dart';
+import 'package:projects/components/widgets/custom_text.dart';
 import 'package:projects/utils/text.dart';
-import 'package:projects/widgets/custom_text.dart';
 
-import '../../../widgets/comming_soon_dilaouge.dart';
-
-class BiseGrade extends StatelessWidget {
-  List? listBoard = [];
+class Subjects extends StatelessWidget {
+  List? list = [];
   List<String?> icons;
-  BiseGrade({super.key, this.listBoard, required this.icons});
+  Subjects({super.key, this.list, required this.icons});
 
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: listBoard?.length,
+      itemCount: list?.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
           crossAxisSpacing: 0,
@@ -35,25 +34,26 @@ class BiseGrade extends StatelessWidget {
                   );
                 },
               );
+
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => const ComingSoonDialog(),));
             },
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
+              alignment: Alignment.center,
               decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.shade300,
-                        spreadRadius: 3,
-                        blurRadius: 6)
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: const [
+                    BoxShadow(color: Colors.blue, spreadRadius: 3, blurRadius: 2)
                   ]),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-
-                   Image.asset(icons[index]!, width: 45, height: 45,),
-                  CustomText(text: listBoard?[index], style: kFormTextStyle)
+                  Image.asset(icons[index]!, width: 45, height: 45,),
+                  CustomText(
+                    text: list?[index],
+                    style: kFormTextStyle,
+                  )
                 ],
               ),
             ),

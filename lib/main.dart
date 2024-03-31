@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:projects/screens/home/new_home.dart';
+
+import 'Student Dashboard/home/new_home.dart';
 
 void main() {
   runApp(const MyApp());

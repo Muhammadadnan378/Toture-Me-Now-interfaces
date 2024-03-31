@@ -3,17 +3,16 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:projects/screens/home/components/Bise.dart';
-import 'package:projects/screens/home/components/level.dart';
-import 'package:projects/screens/home/components/looking_container.dart';
-import 'package:projects/screens/home/components/search.dart';
-import 'package:projects/screens/home/components/subject.dart';
-import 'package:projects/screens/teacher/new_teacher.dart';
 import 'package:projects/utils/images.dart';
 
+import '../../components/Bise.dart';
+import '../../components/level.dart';
+import '../../components/looking_container.dart';
+import '../../components/search.dart';
+import '../../components/subject.dart';
+import '../../components/widgets/comming_soon_dilaouge.dart';
+import '../../components/widgets/custom_text.dart';
 import '../../utils/text.dart';
-import '../../widgets/comming_soon_dilaouge.dart';
-import '../../widgets/custom_text.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

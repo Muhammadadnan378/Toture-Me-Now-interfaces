@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:projects/utils/text.dart';
 import 'package:projects/widgets/custom_text.dart';
 
+import '../../../widgets/comming_soon_dilaouge.dart';
+
 class Subjects extends StatelessWidget {
   List? list = [];
   List<String?> icons;
@@ -19,24 +21,42 @@ class Subjects extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: const [
-                  BoxShadow(color: Colors.blue, spreadRadius: 3, blurRadius: 2)
-                ]),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(icons[index]!, width: 45, height: 45,),
-                CustomText(
-                  text: list?[index],
-                  style: kFormTextStyle,
-                )
-              ],
+          child: GestureDetector(
+            onTap: (){
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return const ComingSoonDialog(
+                    title: "New Feature Alert!",
+                    message: "Get ready for exciting new functionalities coming soon!",
+                    backgroundColor: Colors.lightBlueAccent,
+                    textColor: Colors.white,
+                    icon: Icon(Icons.announcement, color: Colors.white),
+                  );
+                },
+              );
+
+              // Navigator.push(context, MaterialPageRoute(builder: (context) => const ComingSoonDialog(),));
+            },
+            child: Container(
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: const [
+                    BoxShadow(color: Colors.blue, spreadRadius: 3, blurRadius: 2)
+                  ]),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(icons[index]!, width: 45, height: 45,),
+                  CustomText(
+                    text: list?[index],
+                    style: kFormTextStyle,
+                  )
+                ],
+              ),
             ),
           ),
         );

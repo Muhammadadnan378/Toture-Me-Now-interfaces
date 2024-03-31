@@ -10,8 +10,6 @@ class TeacherProfileScreen extends StatefulWidget {
 }
 
 class _TeacherProfileScreenState extends State<TeacherProfileScreen> {
-  int counter = 0;
-
 
 
 
@@ -43,58 +41,6 @@ class MyDrawer extends StatelessWidget {
         // Remove padding
         padding: EdgeInsets.zero,
         children: [
-          // const ListTile(
-          //   title: Text('Profile'),
-          // ),
-
-          // const Padding(
-          //   padding: EdgeInsets.only(left: 20),
-          //   child: Text(
-          //     'Sign in to your account',
-          //     style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
-          //   ),
-          // ),
-          // const SizedBox(height: 10),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 20),
-          //   child: Row(
-          //     children: [
-          //       Container(
-          //         height: 40,
-          //         width: MediaQuery.of(context).size.width * .30,
-          //         decoration: BoxDecoration(
-          //             border: Border.all(
-          //               color: Colors.blue, // Change color as needed
-          //               width: 1.0, // Adjust border width
-          //             ),
-          //             // border: ,
-          //             borderRadius: BorderRadius.circular(5)),
-          //         child: TextButton(
-          //           onPressed: () {},
-          //           child: const Text(
-          //             'Sign Up',
-          //             style: TextStyle(color: Colors.blue),
-          //           ),
-          //         ),
-          //       ),
-          //       const SizedBox(width: 10),
-          //       Container(
-          //         height: 40,
-          //         width: MediaQuery.of(context).size.width * .60,
-          //         decoration: BoxDecoration(
-          //             color: Colors.blue,
-          //             borderRadius: BorderRadius.circular(5)),
-          //         child: TextButton(
-          //             child: const Text(
-          //               'Sign In',
-          //               style: TextStyle(color: Colors.white),
-          //             ),
-          //             onPressed: () {}),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          // const SizedBox(height: 30),
           const Divider(
             thickness: 4,
             color: Colors.blue,
@@ -158,28 +104,13 @@ class MyDrawer extends StatelessWidget {
             onTap: () {},
           ),
 
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              height: 40,
-              width: MediaQuery.of(context).size.width * .50,
-              decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.blue, // Change color as needed
-                    width: 1.0, // Adjust border width
-                  ),
-                  // border: ,
-                  borderRadius: BorderRadius.circular(5)),
-              child: TextButton(
+          TextButton(
 
-                onPressed: () {},
-                child: const Text(
-                  selectionColor: Colors.red,
-                  'Post request for Tutor',
-                  style: TextStyle(color: Colors.blue),
-                ),
-              ),
+            onPressed: () {},
+            child: const Text(
+              selectionColor: Colors.red,
+              'Post request for Tutor',
+              style: TextStyle(color: Colors.blue),
             ),
           ),
           // const SizedBox(height: 20)
